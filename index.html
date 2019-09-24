@@ -31,13 +31,27 @@
         height:25px;
         transition: height 0.2s ease-in-out, width 0.3s ease-out;
         width:70%;
-
     }
 
     input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus
     {
         height: calc(1.5em + .75rem + 2px);
         width:100%;
+    }
+
+    button[type="submit"]
+    {
+        font-size: 10px;
+        padding: .275rem .65rem;
+        border-radius: 10px;
+        transition: font-size 0.4s ease , padding 0.3s ease-out, border-radius 0.35s ease-in-out;
+    }
+
+    button[type="submit"]:hover
+    {
+        font-size: 1rem;
+        padding: .375rem .75rem;
+        border-radius: 8px;
     }
 
 </style>
