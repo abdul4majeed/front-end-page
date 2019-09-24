@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+<link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
+<style>
+    body{padding: 0;
+    margin : 0;
+    box-sizing: border-box;}
+
+    .background-img
+    {
+        background: url('skyline.jpg') center no-repeat;
+        background-size:cover;
+        filter: blur(18px);
+        position: relative;
+    }
+
+    .height-full{
+        height:100vh;
+    }
+
+    input[type="text"],input[type="email"],input[type="password"]
+    {
+        border-radius: 10px;
+        padding:1px;
+        height:25px;
+        transition: height 0.5s ease-in-out;
+    }
+
+    input[type="text"]:focus,input[type="email"]:focus,input[type="password"]:focus
+    {
+        height: calc(1.5em + .75rem + 2px);
+    }
+
+</style>
+</head>
+<body>
+    
+    <div id="id">
+        <div class="background-img height-full"></div>
+       <b-container style="border:1px solid red;margin: 0;width:100%;max-width: 100%;position: absolute;top:0;left:0;right:0;bottom:0;">
+           <b-row>
+            <b-col cols="12" class="d-flex justify-content-center align-items-center height-full " style="border:1px solid red;color:brown;">
+                <div style="background-color: rgba(0,0,0,0.5);padding: 7rem;">
+                        <b-form>
+                                <b-form-group
+                                  id="input-group-1"
+                                  label="Email address:"
+                                  label-for="input-1"
+                                  description="We'll never share your email with anyone else."
+                                >
+                                  <b-form-input
+                                    id="input-1"
+                                    type="email"
+                                    required
+                                    placeholder="Enter email"
+                                  ></b-form-input>
+                                </b-form-group>
+                          
+                                <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+                                  <b-form-input
+                                    id="input-2"
+                                    required
+                                    placeholder="Enter name"
+                                  ></b-form-input>
+                                </b-form-group>
+                          
+                                <b-form-group id="input-group-3" label="Food:" label-for="input-3">
+                                  <b-form-select
+                                    id="input-3"
+                                    required
+                                  ></b-form-select>
+                                </b-form-group>
+                          
+                                <b-form-group id="input-group-4">
+                                  <b-form-checkbox-group  id="checkboxes-4">
+                                    <b-form-checkbox value="me">Check me out</b-form-checkbox>
+                                    <b-form-checkbox value="that">Check that out</b-form-checkbox>
+                                  </b-form-checkbox-group>
+                                </b-form-group>
+                          
+                                <b-button type="submit" variant="primary">Submit</b-button>
+                                <b-button type="reset" variant="danger">Reset</b-button>
+                              </b-form>
+                </div>
+            </b-col>
+           </b-row>
+       </b-container>   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <script>
+    
+    var vue = new Vue({
+        el : '#id',
+    });
+    
+    </script>
+</body>
+</html>
